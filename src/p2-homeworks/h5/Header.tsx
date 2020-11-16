@@ -5,17 +5,16 @@ import c from "./Header.module.css"
 function Header() {
     let [clicked, setClicked] = useState<boolean>(false)
 
-    const btn = `${c.openbtn} ${clicked ? c.mainBtn : c.CloseMainBtn}`
+    const btn = `${c.openbtn} ${clicked ? c.mainBtn : ""}`
     const slide = `${c.sideBar} ${clicked ? c.SlideSideBar : c.CloseSlideSideBar}`
 
     return (
         <div className={c.navBar}>
             {/* add NavLinks*/}
             <div className={c.mainBtn}>
-                <button className={btn} onClick={() => setClicked(true)}>☰ Menu</button>
+                <button className={btn} onClick={() => setClicked(!clicked)}>☰ Menu</button>
             </div>
             <div className={slide}>
-                <a href="javascript:void(0)" className={c.closebtn} onClick={() => setClicked(false)}>X</a>
                 <div className={c.navBarEl}>
                     <NavLink to="/pre-junior" activeClassName={c.activeLink}>PREJUNIOR</NavLink>
                 </div>

@@ -2,7 +2,11 @@
     display: flex;
     flex-direction: column;
     background-color: #111;
-    width: 300px;
+    height: fit-content;
+}
+
+.navBar div {
+    width: 250px;
 }
 
 .sideBar {
@@ -14,8 +18,8 @@
     left: 0;
     background-color: #111;
     overflow-x: hidden;
-    transition: 0.5s;
-    margin-top: 60px;
+    transition: height 0.5s;
+    margin-top: 106px;
 }
 
 .navBarEl a {
@@ -48,19 +52,11 @@
 }
 
 .SlideSideBar {
-    width: 250px;
+    height: 100%;
 }
 
 .CloseSlideSideBar {
-    width: 0;
-}
-
-.mainBtn {
-    transition: margin-left .5s;
-}
-
-.CloseMainBtn {
-    margin-left: 0;
+    height: 0;
 }
 
 .openbtn {
