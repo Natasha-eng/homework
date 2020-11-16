@@ -1,0 +1,16 @@
+.ErrorWrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.ErrorWrapper div {
+    text-align: center;
+    padding: 30px;
+    font-weight: bold;
+    font-variant: small-caps;
+    font-size: 40px;
+}
+
+.ErrorWrapper div:nth-child(2) {
+    color: darkred;
+}

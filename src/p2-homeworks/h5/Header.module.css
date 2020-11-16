@@ -1,4 +1,83 @@
 .navBar {
     display: flex;
     flex-direction: column;
+    background-color: #111;
+    width: 300px;
 }
+
+.sideBar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    margin-top: 60px;
+}
+
+.navBarEl a {
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px;
+    font-size: 25px;
+    color: #818181;
+    width: 100%;
+}
+
+.navBarEl a:hover {
+    background-color: #818181;
+    color: black;
+}
+
+.navBarEl a.activeLink {
+    background-color: darkslategrey;
+    color: white;
+}
+
+.closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+    color: darkred;
+    text-decoration: none;
+}
+
+.SlideSideBar {
+    width: 250px;
+}
+
+.CloseSlideSideBar {
+    width: 0;
+}
+
+.mainBtn {
+    transition: margin-left .5s;
+}
+
+.CloseMainBtn {
+    margin-left: 0;
+}
+
+.openbtn {
+    display: inline-block;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #111;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    width: 100%;
+    outline: none;
+}
+
+.openbtn:hover {
+    background-color: slateblue;
+    color: darkred;
+}
+
+
