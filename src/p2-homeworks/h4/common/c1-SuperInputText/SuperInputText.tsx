@@ -1,5 +1,5 @@
 import React, {ChangeEvent, DetailedHTMLProps, InputHTMLAttributes, KeyboardEvent} from "react";
-import s from "./SuperInputText.module.css";
+import c from "./../../../h5/HW5.module.css";
 
 // тип пропсов обычного инпута
 type DefaultInputPropsType = DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>;
@@ -38,8 +38,8 @@ const SuperInputText: React.FC<SuperInputTextPropsType> = (
         && onEnter(); // то вызвать его
     }
 
-    const finalSpanClassName =  `${s.error} ${spanClassName ? spanClassName : ""}`;
-    const finalInputClassName = `${error ? s.errorInput : s.superInput}`; // need to fix with (?:) and s.superInput
+    const finalSpanClassName =  `${c.error} ${spanClassName ? spanClassName : ""}`;
+    const finalInputClassName = `${error ? c.errorInput : c.superInput}`; // need to fix with (?:) and s.superInput
 
     return (
         <>

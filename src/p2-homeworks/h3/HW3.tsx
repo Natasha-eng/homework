@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import GreetingContainer from "./GreetingContainer";
 import {v1} from "uuid";
+import c from "./../h5/HW5.module.css"
 
 // types
 export type UserType = {
@@ -19,7 +20,7 @@ function HW3() {
     }
 
     return (
-        <div>
+        <div className={c.Chapter}>
             <hr/>
             homeworks 3
 

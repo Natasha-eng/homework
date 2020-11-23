@@ -1,5 +1,6 @@
 import React from "react";
 import Message from "./Message";
+import c from "./../h5/HW5.module.css"
 
 export type MessageDataProps = {
     avatar: string
@@ -17,7 +18,7 @@ const messageData = {
 
 function HW1() {
     return (
-        <div>
+        <div className={c.Chapter}>
             <hr/>
             homeworks 1
 

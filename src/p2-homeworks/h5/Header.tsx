@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import {NavLink} from "react-router-dom";
 import c from "./Header.module.css"
+import {PATH} from "./Routes";
 
 function Header() {
     let [clicked, setClicked] = useState<boolean>(false)
@@ -16,16 +17,13 @@ function Header() {
             </div>
             <div className={slide}>
                 <div className={c.navBarEl}>
-                    <NavLink to="/pre-junior" activeClassName={c.activeLink}>PREJUNIOR</NavLink>
+                    <NavLink to={PATH.PRE_JUNIOR} activeClassName={c.activeLink}>PRE_JUNIOR</NavLink>
                 </div>
                 <div className={c.navBarEl}>
-                    <NavLink to="/prejunior" activeClassName={c.activeLink}>PreJunior</NavLink>
+                    <NavLink to={PATH.JUNIOR} activeClassName={c.activeLink}>JUNIOR</NavLink>
                 </div>
                 <div className={c.navBarEl}>
-                    <NavLink to="/JUNIOR" activeClassName={c.activeLink}>JUNIOR</NavLink>
-                </div>
-                <div className={c.navBarEl}>
-                    <NavLink to="/JuniorPlus" activeClassName={c.activeLink}>JuniorPlus</NavLink>
+                    <NavLink to={PATH.JUNIOR_PLUS} activeClassName={c.activeLink}>JUNIOR_PLUS</NavLink>
                 </div>
             </div>
         </div>

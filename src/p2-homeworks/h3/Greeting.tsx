@@ -1,5 +1,6 @@
 import React, {ChangeEvent} from "react";
-import s from "./Greeting.module.css";
+import c from "./../h5/HW5.module.css";
+
 
 type GreetingPropsType = {
     name: string // need to fix any
@@ -14,14 +15,14 @@ const Greeting: React.FC<GreetingPropsType> = (
     {name, setNameCallback, addUser, error, totalUsers} // деструктуризация пропсов
 ) => {
     // need to fix with (?:)
-    const inputClass = error ? s.error : s.someClass;
+    const inputClass = error ? c.error : c.superInput;
 
     return (
         <div>
             <input value={name} onChange={setNameCallback} className={inputClass}/>
-            <span className = {s.errorText}>{error}</span>
-            <button onClick={addUser} className={s.addButton}>add</button>
-            <span className={s.countUsersText}>{totalUsers}</span>
+            <span className = {c.errorText}>{error}</span>
+            <button onClick={addUser} className={c.default}>add</button>
+            <span className={c.countUsersText}>{totalUsers}</span>
         </div>
     );
 }

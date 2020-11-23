@@ -1,8 +1,9 @@
 .navBar {
     display: flex;
     flex-direction: column;
-    background-color: #111;
+    background-color: dimgray;
     height: fit-content;
+    position: fixed;
 }
 
 .navBar div {
@@ -13,8 +14,8 @@
     height: 100%;
     width: 0;
     position: fixed;
+    top: 0;;
     z-index: 2;
-    top: 0;
     left: 0;
     background-color: #111;
     overflow: hidden;
@@ -41,16 +42,6 @@
     color: white;
 }
 
-.closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
-    color: darkred;
-    text-decoration: none;
-}
-
 .SlideSideBar {
     height: 100%;
 }
@@ -72,8 +63,8 @@
 }
 
 .openbtn:hover {
-    background-color: slateblue;
-    color: darkred;
+    background-color: dimgray;
+    color: black;
 }
 
 
