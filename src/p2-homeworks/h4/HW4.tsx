@@ -22,7 +22,7 @@ function HW4() {
     return (
         <div className={c.Chapter}>
             <hr/>
-            homeworks 4
+            <div className={c.NameChapter}>homeworks 4</div>
 
             <div className={s.column}>
                 {/*should work (должно работать)*/}

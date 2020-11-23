@@ -40,7 +40,7 @@ function HW2() {
     return (
         <div className={c.Chapter}>
             <hr/>
-            homeworks 2
+            <div className={c.NameChapter}>homeworks 2</div>
 
             {/*should work (должно работать)*/}
             <Affairs

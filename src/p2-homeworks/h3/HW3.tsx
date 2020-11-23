@@ -22,7 +22,7 @@ function HW3() {
     return (
         <div className={c.Chapter}>
             <hr/>
-            homeworks 3
+            <div className={c.NameChapter}>homeworks 3</div>
 
             {/*should work (должно работать)*/}
             <GreetingContainer users={users} addUserCallback={addUserCallback}/>

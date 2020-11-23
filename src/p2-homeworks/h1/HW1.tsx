@@ -20,7 +20,8 @@ function HW1() {
     return (
         <div className={c.Chapter}>
             <hr/>
-            homeworks 1
+
+            <div className={c.NameChapter} >homeworks 1</div>
 
             {/*should work (должно работать)*/}
 
