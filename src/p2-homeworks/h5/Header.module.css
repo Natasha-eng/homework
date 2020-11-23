@@ -4,6 +4,7 @@
     background-color: dimgray;
     height: fit-content;
     position: fixed;
+    top:0px;
 }
 
 .navBar div {
@@ -16,11 +17,10 @@
     position: fixed;
     top: 0;;
     z-index: 2;
-    left: 0;
     background-color: #111;
     overflow: hidden;
     transition: height 0.5s;
-    margin-top: 134px;
+    margin-top: 47px
 }
 
 .navBarEl a {
