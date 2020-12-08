@@ -29,9 +29,6 @@ function HW1() {
                      time={messageData.time}/>
 
             <hr/>
-            {/*для личного творчества, могу проверить*/}
-            {/*<AlternativeMessage/>*/}
-            <hr/>
         </div>
     );
 }

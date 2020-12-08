@@ -18,7 +18,7 @@
 
 }
 
-.Chapter .NameChapter{
+.Chapter .NameChapter {
     text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;
     text-align: center;
     font-size: 30px;
@@ -31,7 +31,6 @@
 }
 
 .default {
-    position: relative;
     color: white;
     font-weight: bold;
     text-decoration: none;
@@ -86,87 +85,58 @@
     color: red;
 }
 
-.section{
+.section {
     margin: 15px;
 }
 
-.section div{
-padding: 5px;
+.section div {
+    padding: 5px;
 }
 
-.section button{
-
-}
-
-.section:before{
-
-}
-
-.h7Wrapper{
+.h7Wrapper {
     display: flex;
     justify-content: space-around;
     height: 5rem;
 }
-.selectContainer{
-    width: 10em;
+
+.container {
+    display: flex;
+}
+
+.label {
     position: relative;
 }
 
-.selectContainer select{
-    display: none;
-}
-
-.radioContainer{
-    display: block;
-    position: relative;
-    padding-left: 35px;
-    margin-bottom: 12px;
-    cursor: pointer;
-    font-size: 22px;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-}
-
-.radioContainer input{
+.label.checked::after {
+    content: '';
     position: absolute;
-    opacity: 0;
-    cursor: pointer;
-}
-
-.checkmark{
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 25px;
-    width: 25px;
-    background-color: #6a364e;
-    border-radius: 50%;
-}
-
-.container:hover input ~ .checkmark{
-    background-color:black;
-}
-
-.container input:checked ~ .checkmark{
-    background-color: #2196F3;
-}
-
-.checkmark:after{
-    content: "";
-    position: absolute;
-    display: none;
-}
-.container input:checked ~ .checkmark:after {
-    display: block;
-}
-
-.container .checkmark:after {
-    top: 9px;
-    left: 9px;
+    background-color: black;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     width: 8px;
     height: 8px;
     border-radius: 50%;
-    background: white;
+}
+
+.label::before {
+    content: '';
+    border: 1px solid black;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 10px;
+    height: 10px;
+}
+
+.input {
+    margin: 0;
+    padding: 0;
+    opacity: 0;
+}
+
+.text {
+    margin-left: 4px;
 }
