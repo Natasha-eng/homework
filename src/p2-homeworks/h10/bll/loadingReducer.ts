@@ -12,7 +12,7 @@ export type ActionType = ReturnType<typeof loadingAC>
 
 export const loadingReducer = (state = initState, action: ActionType): initStateType => {
     switch (action.type) {
-        case "SET_LOADING": {
+        case SET_LOADING: {
             return {
                 ...state,
                 loading: action.loading
