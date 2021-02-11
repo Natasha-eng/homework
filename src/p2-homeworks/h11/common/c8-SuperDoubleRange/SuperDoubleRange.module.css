@@ -1,6 +1,5 @@
 .doubleRangeContainer {
 display: flex;
-
 }
 
 .rangeSlider {
@@ -20,7 +19,6 @@ display: flex;
     border-radius: 5px;
     background: #d3d3d3;
     outline: none;
-    z-index: 0;
 }
 .rangeValue{
     width: 30px;
