@@ -1,5 +1,5 @@
 import React, {ChangeEvent} from "react";
-import styles from './SuperDoubleRange.module.css'
+import doubleRangeStyles from './SuperDoubleRange.module.css'
 
 type SuperDoubleRangePropsType = {
     onDoubleRangeChange?: (values: [number, number]) => void
@@ -23,7 +23,7 @@ const SuperDoubleRange: React.FC<SuperDoubleRangePropsType> = (
 
     return (
         <>
-            <div className={styles.rangeSlider}>
+            <div className={doubleRangeStyles.rangeSlider}>
                 <input type="range" min={0} max={100} step={1} value={values[0]} onChange={onChangeFirstValueHandler}/>
                 <input type="range" min={0} max={100} step={1} value={values[1]} onChange={onChangeSecondValueHandler}/>
             </div>

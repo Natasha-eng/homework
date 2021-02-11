@@ -1,0 +1,37 @@
+.label {
+    position: relative;
+}
+
+.label.checked::after {
+    content: '';
+    position: absolute;
+    background-color: black;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+}
+
+.label::before {
+    content: '';
+    border: 1px solid black;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 10px;
+    height: 10px;
+}
+
+.input {
+    margin: 0;
+    padding: 0;
+    opacity: 0;
+}
+
+.text {
+    margin-left: 4px;
+}

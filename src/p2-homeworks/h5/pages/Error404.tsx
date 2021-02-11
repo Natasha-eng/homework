@@ -1,9 +1,9 @@
 import React from "react";
-import c from "./Error404.module.css"
+import errorPageStyle from "./Error404.module.css"
 
 function Error404() {
     return (
-        <div className={c.ErrorWrapper}>
+        <div className={errorPageStyle.ErrorWrapper}>
             <div>404</div>
             <div>Page not found!</div>
             <div>—ฅ/ᐠ.̫ .ᐟ\ฅ—</div>

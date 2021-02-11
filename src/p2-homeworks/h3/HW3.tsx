@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import GreetingContainer from "./GreetingContainer";
 import {v1} from "uuid";
-import c from "./../h5/HW5.module.css"
+import styles from "./../h5/HW5.module.css"
 
 // types
 export type UserType = {
@@ -20,9 +20,9 @@ function HW3() {
     }
 
     return (
-        <div className={c.Chapter}>
+        <div className={styles.Chapter}>
             <hr/>
-            <div className={c.NameChapter}>homeworks 3</div>
+            <div className={styles.NameChapter}>homeworks 3</div>
 
             {/*should work (должно работать)*/}
             <GreetingContainer users={users} addUserCallback={addUserCallback}/>

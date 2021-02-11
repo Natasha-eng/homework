@@ -1,0 +1,5 @@
+.h7Wrapper {
+    display: flex;
+    justify-content: space-around;
+    height: 5rem;
+}

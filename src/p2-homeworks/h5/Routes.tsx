@@ -4,7 +4,7 @@ import PreJunior from "./pages/PreJunior";
 import Error404 from "./pages/Error404";
 import Junior from "./pages/Junior";
 import JuniorPlus from "./pages/Junior+";
-import c from"./Router.module.css"
+import style from"./Router.module.css"
 
 export const PATH = {
     PRE_JUNIOR: "/pre-junior",
@@ -16,7 +16,7 @@ export const PATH = {
 function Routes() {
 
     return (
-        <div className={c.RouterWrapper}>
+        <div className={style.RouterWrapper}>
             {/*Switch выбирает первый подходящий роут*/}
             <Switch>
                 {/*в начале мы попадаем на страницу "/" и переходим сразу на страницу PRE_JUNIOR*/}

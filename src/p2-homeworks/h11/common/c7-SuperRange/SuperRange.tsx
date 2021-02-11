@@ -1,5 +1,6 @@
 import React, {ChangeEvent, DetailedHTMLProps, InputHTMLAttributes} from "react";
-import s from "./SuperRange.module.css";
+import rangeStyle from "./SuperRange.module.css";
+import style from "./SuperRange.module.css";
 
 // тип пропсов обычного инпута
 type DefaultInputPropsType = DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>;
@@ -25,10 +26,10 @@ const SuperRange: React.FC<SuperRangePropsType> = (
         onChangeRange && onChangeRange(+e.currentTarget.value);
     }
 
-    const finalRangeClassName = `${s.range} ${className ? className : ""}`;
+    const finalRangeClassName = `${rangeStyle.range} ${className ? className : ""}`;
 
     return (
-        <>
+        <div className={style.rangeSliderContainer}>
             <input
                 type={"range"}
                 onChange={onChangeCallback}
@@ -36,7 +37,7 @@ const SuperRange: React.FC<SuperRangePropsType> = (
 
                 {...restProps} // отдаём инпуту остальные пропсы если они есть (value например там внутри)
             />
-        </>
+        </div>
     );
 }
 

@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import SuperEditableSpan from "./common/c4-SuperEditableSpan/SuperEditableSpan";
 import SuperButton from "../h4/common/c2-SuperButton/SuperButton";
 import {restoreState, saveState} from "./localStorage/localStorage";
-import c from "./../h5/HW5.module.css"
+import styles from "./../h5/HW5.module.css"
 
 function HW6() {
     const [value, setValue] = useState<string>("");
@@ -16,9 +16,9 @@ function HW6() {
     };
 
     return (
-        <div className={c.Chapter}>
+        <div className={styles.Chapter}>
             <hr/>
-            <div className={c.NameChapter}>homeworks 6</div>
+            <div className={styles.NameChapter}>homeworks 6</div>
 
             {/*should work (должно работать)*/}
             <div>

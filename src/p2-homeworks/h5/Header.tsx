@@ -1,29 +1,33 @@
 import React, {useState} from "react";
 import {NavLink} from "react-router-dom";
-import c from "./Header.module.css"
+import navBarStyle from "./Header.module.css"
 import {PATH} from "./Routes";
 
 function Header() {
     let [clicked, setClicked] = useState<boolean>(false)
 
-    const btn = `${c.openbtn} ${clicked ? c.mainBtn : ""}`
-    const slide = `${c.sideBar} ${clicked ? c.SlideSideBar : c.CloseSlideSideBar}`
+    const btn = `${navBarStyle.openbtn} ${clicked ? navBarStyle.mainBtn : ""}`
+    const slide = `${navBarStyle.sideBar} ${clicked ? navBarStyle.SlideSideBar : navBarStyle.CloseSlideSideBar}`
+
+    const clickHandler = () => {
+        setClicked(!clicked)
+    }
 
     return (
-        <div className={c.navBar}>
+        <div className={navBarStyle.navBar}>
             {/* add NavLinks*/}
-            <div className={c.mainBtn}>
-                <button className={btn} onClick={() => setClicked(!clicked)}>☰ Menu</button>
+            <div className={navBarStyle.mainBtn}>
+                <button className={btn} onClick={clickHandler}>☰ Menu</button>
             </div>
             <div className={slide}>
-                <div className={c.navBarEl}>
-                    <NavLink to={PATH.PRE_JUNIOR} activeClassName={c.activeLink}>PRE_JUNIOR</NavLink>
+                <div className={navBarStyle.navBarEl}>
+                    <NavLink to={PATH.PRE_JUNIOR} activeClassName={navBarStyle.activeLink}>PRE_JUNIOR</NavLink>
                 </div>
-                <div className={c.navBarEl}>
-                    <NavLink to={PATH.JUNIOR} activeClassName={c.activeLink}>JUNIOR</NavLink>
+                <div className={navBarStyle.navBarEl}>
+                    <NavLink to={PATH.JUNIOR} activeClassName={navBarStyle.activeLink}>JUNIOR</NavLink>
                 </div>
-                <div className={c.navBarEl}>
-                    <NavLink to={PATH.JUNIOR_PLUS} activeClassName={c.activeLink}>JUNIOR_PLUS</NavLink>
+                <div className={navBarStyle.navBarEl}>
+                    <NavLink to={PATH.JUNIOR_PLUS} activeClassName={navBarStyle.activeLink}>JUNIOR_PLUS</NavLink>
                 </div>
             </div>
         </div>

@@ -1,6 +1,6 @@
 import React from "react";
 import Message from "./Message";
-import c from "./../h5/HW5.module.css"
+import styles from "./../h5/HW5.module.css"
 
 export type MessageDataProps = {
     avatar: string
@@ -18,10 +18,10 @@ const messageData = {
 
 function HW1() {
     return (
-        <div className={c.Chapter}>
+        <div className={styles.Chapter}>
             <hr/>
 
-            <div className={c.NameChapter} >homeworks 1</div>
+            <div className={styles.NameChapter} >homeworks 1</div>
 
             {/*should work (должно работать)*/}
 

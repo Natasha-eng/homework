@@ -1,6 +1,6 @@
-import React, {useEffect, useState} from "react";
+import React, {useState} from "react";
 import SuperButton from "../h4/common/c2-SuperButton/SuperButton";
-import c from "./Clock.module.css"
+import clockStyles from "./Clock.module.css"
 
 function Clock() {
     const [timerId, setTimerId] = useState<number>(0);
@@ -12,15 +12,13 @@ function Clock() {
     }
 
     const start = () => {
+        stop();
         const id: number = window.setInterval(() => {
             //setDate
             setDate(new Date());
 
         }, 1000);
         setTimerId(id);
-        return () => {
-            clearInterval(id)
-        }
     }
 
     const onMouseEnter = () => {
@@ -34,12 +32,12 @@ function Clock() {
 
     const twoDigits = (num: number) => num < 10 ? '0' + num : num;
     //const stringTime = new Date().toLocaleTimeString() //"Time"; // fix with date
-    const stringTime = twoDigits(date.getHours()) + '-' + twoDigits(date.getMinutes()) + '-' + twoDigits(date.getSeconds());
+    const stringTime = twoDigits(date.getHours()) + ':' + twoDigits(date.getMinutes()) + ':' + twoDigits(date.getSeconds());
     const stringDate = new Date().toLocaleDateString()  //"Date"; // fix with date
 
     return (
         <div>
-            <div className={c.time}>
+            <div className={clockStyles.time}>
                 <div
                     onMouseEnter={onMouseEnter}
                     onMouseLeave={onMouseLeave}

@@ -1,9 +1,9 @@
 import React, {ChangeEvent, useState} from "react";
 import SuperInputText from "./common/c1-SuperInputText/SuperInputText";
-import s from "./HW4.module.css";
+import style from "./HW4.module.css";
 import SuperButton from "./common/c2-SuperButton/SuperButton";
 import SuperCheckbox from "./common/c3-SuperCheckbox/SuperCheckbox";
-import c from "./../h5/HW5.module.css"
+import styles from "./../h5/HW5.module.css"
 
 function HW4() {
     const [text, setText] = useState<string>("");
@@ -20,18 +20,18 @@ function HW4() {
     const testOnChange = (e: ChangeEvent<HTMLInputElement>) => setChecked(e.currentTarget.checked);
 
     return (
-        <div className={c.Chapter}>
+        <div className={styles.Chapter}>
             <hr/>
-            <div className={c.NameChapter}>homeworks 4</div>
+            <div className={styles.NameChapter}>homeworks 4</div>
 
-            <div className={s.column}>
+            <div className={style.column}>
                 {/*should work (должно работать)*/}
                 <SuperInputText
                     value={text}
                     onChangeText={setText}
                     onEnter={showAlert}
                     error={error}
-                    className={s.blue} // проверьте, рабоет ли смешивание классов
+                    className={style.blue} // проверьте, рабоет ли смешивание классов
                 />
 
                 {/*should work (должно работать)*/}
@@ -46,7 +46,7 @@ function HW4() {
                     checked={checked}
                     onChangeChecked={setChecked}
                 >
-                    some text {/*// этот текст попадёт в children*/}
+                    HELLO!!! {/*// этот текст попадёт в children*/}
                 </SuperCheckbox>
 
                 {/*// onChange тоже должен работать*/}

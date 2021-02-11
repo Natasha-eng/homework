@@ -1,3 +1,27 @@
+.rangeContainer {
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.rangeSliderContainer {
+    width: 400px;
+}
+
+.rangeSliderContainer input[type="range"] {
+    -webkit-appearance: none;
+    width: 400px;
+    height: 15px;
+    border-radius: 5px;
+    background: #d3d3d3;
+    outline: none;
+    z-index: 0;
+}
+
+.rangeValue {
+    width: 30px;
+    margin-right: 13px;
+}
+
 .range {
 
 }

@@ -1,6 +1,7 @@
 import React from "react";
 import {AffairType} from "./HW2";
-import c from "./../h5/HW5.module.css"
+import buttonStyles from "./../h4/common/c2-SuperButton/SuperButton.module.css";
+import styles from "./../h5/HW5.module.css";
 
 type AffairPropsType = {
     // key не нужно типизировать
@@ -14,10 +15,10 @@ function Affair(props: AffairPropsType) {
     };// need to fix
 
     return (
-        <div className={c.section}>
+        <div className={styles.section}>
 
             <div key={props.affair._id}>{props.affair.name} <span>Priority: {props.affair.priority}</span></div>
-            <button onClick={deleteCallback} className={c.default}>X</button>
+            <button onClick={deleteCallback} className={buttonStyles.default}>X</button>
         </div>
     );
 }
